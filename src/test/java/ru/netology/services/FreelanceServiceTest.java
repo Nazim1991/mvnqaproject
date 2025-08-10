@@ -14,9 +14,9 @@ public class FreelanceServiceTest {
         int threshold = 20_000;
 
         int expected = 3;
-        int actual = service.calculateRestMonths(income, expenses, threshold);
+        int restMonths = service.calculate(income, expenses, threshold);
 
-        Assertions.assertEquals(expected, actual);
+        Assertions.assertEquals(expected, restMonths);
     }
 
     @Test
@@ -28,8 +28,8 @@ public class FreelanceServiceTest {
         int threshold = 150_000;
 
         int expected = 2;
-        int actual = service.calculateRestMonths(income, expenses, threshold);
+        int restMonths = service.calculate(income, expenses, threshold);
 
-        Assertions.assertEquals(expected, actual);
+        Assertions.assertEquals(expected, restMonths);
     }
 }
